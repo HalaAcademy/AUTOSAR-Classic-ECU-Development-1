@@ -39,7 +39,7 @@ void ADC1_2_IRQHandler(void)
     else if (ADC_GetITStatus(ADC2, ADC_IT_EOC) != RESET)
     {
         // Handle overrun error
-        Adc_TransferComplete_Callback(ADC1);
+        Adc_TransferComplete_Callback(ADC2);
 
         // Clear the interrupt flag
         ADC_ClearITPendingBit(ADC2, ADC_IT_EOC);
